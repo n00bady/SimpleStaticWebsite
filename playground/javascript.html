@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Playground!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navwrap">
+            <nav>  
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="imagemap.html">Imagemap</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="javascript.html">Javascript</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mainwrap">
+            <h1>Page 3</h1>
+                <div id="stage">
+                    <script>
+                        var life = function(a,b,c,d,e){for(c=[d=b*b];d--;c[d]=e==3||a[d]&&e==2)e=a[d-b-1]+a[d-b]+a[d-b+1]+a[d-1]+a[d+1]+a[d+b-1]+a[d+b]+a[d+b+1];return c};
+
+                        var array = [],
+                        elems = {},
+                        elem,
+                        stage = document.getElementById("stage"),
+                        size = 50,
+                        x, y;
+
+                        // create DOM elements
+                        for (x = 0; x < size; x++){
+                        for (y = 0; y < size; y++){
+                            elem = document.createElement("div");
+                            stage.appendChild(elem);
+                            elems[x + "," + y] = elem;
+                            array.push(Math.random() < 0.5);
+                        }        
+                        stage.appendChild(document.createElement("br"));
+                        }
+
+                        // render stage
+                        function play(){
+                        var index = 0, color;
+                        
+                        array = life(array, size);
+                        for (x = 0; x < size; x++){
+                            for (y = 0; y < size; y++){
+                            elems[x + "," + y].className = array[index++] ? "alive" : "";
+                            }
+                        }
+                        setTimeout(play, 10);
+                        }
+                        play();
+                    </script>
+                </div>
+                <a href="https://gist.github.com/1134658">Source</a>
+        </div>
+    </body>
+</html>
