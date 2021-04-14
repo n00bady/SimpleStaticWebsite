@@ -152,8 +152,8 @@ label {
     width: 10px;
     height: 10px;
     margin: 1px 1px 0 0;
-    background-color: #EEE;
+    background-color: #29353B;
   }
   #stage div.alive {
-    background-color: #000;
+    background-color: #01EBBE;
   }
