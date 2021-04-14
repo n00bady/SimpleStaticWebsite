@@ -1,6 +1,6 @@
 * {
-    margin: 30;
-    padding: 30;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -14,13 +14,20 @@ body {
 }
 
 .navwrap {
-    margin: 0 auto 0 60px;
-    width: 1000px;
+    /*margin: 0 auto 0 80px;
+    width: 1000px;*/
+    max-width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1%;
 }
 
 .mainwrap {
-    margin: 0 auto 0 60px;
-    width: 1000px;
+    /*margin: 0 auto 0 60px;
+    width: 100%;*/
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 nav {
@@ -30,7 +37,8 @@ nav {
 }
 
 ul {
-    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul li {
