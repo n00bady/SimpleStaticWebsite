@@ -121,10 +121,18 @@ input[type=submit] {
     border: #FF4796;
     border-radius: 4px;
     cursor: pointer;
+    font-family: noto sans;
+    font-size: 16px;
 }
 
 input[type=submit]:hover {
     background-color: #16A085;
+}
+
+label {
+    font-family: noto sans;
+    color: #16A085;
+    padding-right: 8px;
 }
 
 .formwrap {
