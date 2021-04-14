@@ -19,8 +19,19 @@
             </nav>
         </div>
         <div class="mainwrap">
-            <h1>Page 3</h1>
+            <h1>Game of Life</h1>
+            <br/>
+            <div class="textwrap">
+                <p>
+                    Conway's game of life in less than 140bytes with javascript by aemkei.
+                </p>
+                <p>
+                    <a href="https://gist.github.com/1134658">Source</a>
+                </p>
+            </div>
+            <br/>
                 <div id="stage">
+                    <!--Game of Life 140bytes in js-->
                     <script>
                         var life = function(a,b,c,d,e){for(c=[d=b*b];d--;c[d]=e==3||a[d]&&e==2)e=a[d-b-1]+a[d-b]+a[d-b+1]+a[d-1]+a[d+1]+a[d+b-1]+a[d+b]+a[d+b+1];return c};
 
@@ -44,20 +55,20 @@
 
                         // render stage
                         function play(){
-                        var index = 0, color;
-                        
-                        array = life(array, size);
-                        for (x = 0; x < size; x++){
-                            for (y = 0; y < size; y++){
-                            elems[x + "," + y].className = array[index++] ? "alive" : "";
+                            var index = 0, color;
+                            
+                            array = life(array, size);
+                            for (x = 0; x < size; x++){
+                                for (y = 0; y < size; y++){
+                                elems[x + "," + y].className = array[index++] ? "alive" : "";
+                                }
                             }
-                        }
-                        setTimeout(play, 10);
+                            setTimeout(play, 120);
                         }
                         play();
                     </script>
+                    <!--End of javascript-->
                 </div>
-                <a href="https://gist.github.com/1134658">Source</a>
         </div>
     </body>
 </html>
