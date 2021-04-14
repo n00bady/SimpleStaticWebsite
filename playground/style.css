@@ -13,7 +13,12 @@ body {
     font-family: noto sans;
 }
 
-.wrapper {
+.navwrap {
+    margin: 0 auto 0 60px;
+    width: 1000px;
+}
+
+.mainwrap {
     margin: 0 auto 0 60px;
     width: 1000px;
 }
