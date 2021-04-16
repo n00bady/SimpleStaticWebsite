@@ -92,8 +92,15 @@ p:hover {
 }
 
 /* CSS for the forms */
+
+.centertextarea {
+    max-width: 80%;
+    margin: auto;
+    margin-left: 8%;
+}
+
 input[type=text], select {
-    width: 30%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -120,6 +127,7 @@ textarea {
     color: #16A085;
     font-size: 16px;
     font-family: noto sans;
+    resize: none;
 }
 
 input[type=submit] {
