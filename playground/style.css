@@ -93,7 +93,7 @@ p:hover {
 
 /* CSS for the forms */
 input[type=text], select {
-    width: 50%;
+    width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -102,6 +102,11 @@ input[type=text], select {
     color: #16A085;
     border-radius: 4px;
     box-sizing: border-box;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 80%;
 }
 
 textarea {
@@ -133,6 +138,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #16A085;
+    font-weight: bold;
 }
 
 label {
