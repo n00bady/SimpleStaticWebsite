@@ -8,68 +8,70 @@
         <link rel="shortcut icon" href="favicon.ico">
     </head>
     <body>
-        <div class="navwrap">
-            <nav>  
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="imagemap.html">Imagemap</a></li>
-                    <li><a href="form.html">Form</a></li>
-                    <li><a href="javascript.html">Javascript</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="mainwrap">
-            <h1>Game of Life</h1>
-            <br/>
-            <div class="textwrap">
-                <p>
-                    Conway's game of life in less than 140bytes with javascript by aemkei.
-                </p>
-                <p>
-                    <a href="https://gist.github.com/1134658">Source</a>
-                </p>
+        <div class="content">
+            <div class="navwrap">
+                <nav>  
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="imagemap.html">Imagemap</a></li>
+                        <li><a href="form.html">Form</a></li>
+                        <li><a href="javascript.html">Javascript</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
             </div>
-            <br/>
-                <div id="stage">
-                    <!--Game of Life 140bytes in js-->
-                    <script>
-                        var life = function(a,b,c,d,e){for(c=[d=b*b];d--;c[d]=e==3||a[d]&&e==2)e=a[d-b-1]+a[d-b]+a[d-b+1]+a[d-1]+a[d+1]+a[d+b-1]+a[d+b]+a[d+b+1];return c};
-
-                        var array = [],
-                        elems = {},
-                        elem,
-                        stage = document.getElementById("stage"),
-                        size = 50,
-                        x, y;
-
-                        // create DOM elements
-                        for (x = 0; x < size; x++){
-                        for (y = 0; y < size; y++){
-                            elem = document.createElement("div");
-                            stage.appendChild(elem);
-                            elems[x + "," + y] = elem;
-                            array.push(Math.random() < 0.5);
-                        }        
-                        stage.appendChild(document.createElement("br"));
-                        }
-
-                        // render stage
-                        function play(){
-                            var index = 0, color;
-                            
-                            array = life(array, size);
-                            for (x = 0; x < size; x++){
-                                for (y = 0; y < size; y++){
-                                elems[x + "," + y].className = array[index++] ? "alive" : "";
-                                }
-                            }
-                            setTimeout(play, 120);
-                        }
-                        play();
-                    </script>
-                    <!--End of javascript-->
+            <div class="mainwrap">
+                <h1>Game of Life</h1>
+                <br/>
+                <div class="textwrap">
+                    <p>
+                        Conway's game of life in less than 140bytes with javascript by aemkei.
+                    </p>
+                    <p>
+                        <a href="https://gist.github.com/1134658">Source</a>
+                    </p>
                 </div>
+                <br/>
+                <div id="stage">
+                        <!--Game of Life 140bytes in js-->
+                        <script>
+                            var life = function(a,b,c,d,e){for(c=[d=b*b];d--;c[d]=e==3||a[d]&&e==2)e=a[d-b-1]+a[d-b]+a[d-b+1]+a[d-1]+a[d+1]+a[d+b-1]+a[d+b]+a[d+b+1];return c};
+
+                            var array = [],
+                            elems = {},
+                            elem,
+                            stage = document.getElementById("stage"),
+                            size = 50,
+                            x, y;
+
+                            // create DOM elements
+                            for (x = 0; x < size; x++){
+                            for (y = 0; y < size; y++){
+                                elem = document.createElement("div");
+                                stage.appendChild(elem);
+                                elems[x + "," + y] = elem;
+                                array.push(Math.random() < 0.5);
+                            }        
+                            stage.appendChild(document.createElement("br"));
+                            }
+
+                            // render stage
+                            function play(){
+                                var index = 0, color;
+                                
+                                array = life(array, size);
+                                for (x = 0; x < size; x++){
+                                    for (y = 0; y < size; y++){
+                                    elems[x + "," + y].className = array[index++] ? "alive" : "";
+                                    }
+                                }
+                                setTimeout(play, 120);
+                            }
+                            play();
+                        </script>
+                        <!--End of javascript-->
+                </div>
+            </div>
         </div>
     </body>
 </html>
